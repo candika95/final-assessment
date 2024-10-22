@@ -1,9 +1,7 @@
 import { sum } from './index.js';
+import { test } from 'node:test';
 import { strictEqual } from 'node:assert';
 
-try {
-  strictEqual(sum(1, 2), 3);
-  console.log('Test passed');
-} catch (error) {
-  console.error(error);
-}
+test('Test function', (t) => {
+  strictEqual(sum(1, 2), 3, 'sum(1, 2) should return 3');
+});
